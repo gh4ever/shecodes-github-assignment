@@ -1,6 +1,4 @@
 .body {
-  background-color: rgb(252, 180, 192);
-  color: rgb(233, 233, 233);
   font-family: Raleway;
   box-sizing: border-box;
   border-radius: 16px;
@@ -19,11 +17,25 @@ h1 {
 }
 
 .searchnow {
-  background-color: rgb(243, 182, 147);
+  background: rgb(243, 182, 147);
+  font-weight: bold;
+  font-size: 16px;
+  padding: 15px 0;
+  border: none;
 }
 
 .current-button {
-  background-color: rgb(165, 211, 217);
+  background: rgb(165, 211, 217);
+  font-weight: bold;
+  font-size: 16px;
+  padding: 15px 0;
+  border: none;
+}
+
+.current-button:hover {
+  background: #ff96ad;
+  box-shadow: 0 0 5px #ff96ad, 0 0 25px #ff96ad, 0 0 50px #ff96ad,
+    0 0 200px #ff96ad;
 }
 
 ul {
@@ -40,6 +52,8 @@ li {
 }
 
 .weatherapp {
+  background-color: rgb(252, 180, 192);
+  color: rgb(33, 33, 33);
   border: 1px solid rgb(243, 243, 244);
   padding: 15px;
   margin: 20px auto;
