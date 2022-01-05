@@ -71,6 +71,17 @@ li {
 .units {
   position: relative;
   top: -34px;
+  font-size: 16px;
+}
+
+.celsius-link,
+fahrenheit-link {
+  cursor: default;
+}
+
+.celsius-link,
+fahrenheit-link:hover {
+  text-decoration: none;
 }
 
 .search-bar {
