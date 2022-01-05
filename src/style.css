@@ -1,15 +1,29 @@
 .body {
-  background-color: rgb(247, 246, 244);
-  color: rgb(57, 63, 90);
+  background-color: rgb(252, 180, 192);
+  color: rgb(233, 233, 233);
   font-family: Raleway;
+  box-sizing: border-box;
+  border-radius: 16px;
+  box-shadow: 0 30px 50px rgb(65 50 100 / 8%);
+  padding: 40px;
 }
 
 h1 {
+  color: rgb(147, 212, 191);
+  text-shadow: 4px 3px 0px #7a7a7a;
   text-align: center;
   font-size: 45px;
   font-weight: bold;
   line-height: 28px;
   margin-top: 20px;
+}
+
+.searchnow {
+  background-color: rgb(243, 182, 147);
+}
+
+.current-button {
+  background-color: rgb(165, 211, 217);
 }
 
 ul {
@@ -26,7 +40,7 @@ li {
 }
 
 .weatherapp {
-  border: 1px solid rgb(253, 97, 88);
+  border: 1px solid rgb(243, 243, 244);
   padding: 15px;
   margin: 20px auto;
   border-radius: 10px;
@@ -60,6 +74,6 @@ li {
   margin-inline-end: 0px;
 }
 
-p {
+footer {
   text-align: center;
 }
