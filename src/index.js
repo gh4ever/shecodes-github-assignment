@@ -64,6 +64,20 @@ function getCurrentLocation(event) {
   navigator.geolocation.getCurrentPosition(showLocation)
 }
 
+function showCelsius(event) {
+  event.preventDefault()
+  let tempElement = document.querySelector('#tempnow')
+  let celciusTemp = Math.round(response.data.main.temp)
+  tempElement.innerHTML = celciusTemp
+}
+
+function showFahrenheit(event) {
+  event.preventDefault()
+  let fahrenheitTemp = document.querySelector('#tempnow')
+  let celciusTemp = Math.round(response.data.main.temp)
+  fahrenheitTemp.innerHTML = Math.round((celciusTemp * 9) / 5 + 32)
+}
+
 let dateElement = document.querySelector('#date')
 let currentTiem = new Date()
 dateElement.innerHTML = formatDate(currentTiem)
@@ -73,5 +87,11 @@ searchForm.addEventListener('submit', changeName)
 
 let currentLocation = document.querySelector('#current-button')
 currentLocation.addEventListener('click', getCurrentLocation)
+
+let celsiusLink = document.querySelector('#celsius-link')
+celsiusLink.addEventListener('click', showCelsius)
+
+let fahrenheitLink = document.querySelector('#fahrenheit-link')
+fahrenheitLink.addEventListener('click', showFahrenheit)
 
 searchCity('Tel Aviv')
