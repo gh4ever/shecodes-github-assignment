@@ -64,18 +64,17 @@ function getCurrentLocation(event) {
   navigator.geolocation.getCurrentPosition(showLocation)
 }
 
-function showCelsius(event) {
-  event.preventDefault()
-  let tempElement = document.querySelector('#tempnow')
-  let celciusTemp = Math.round(response.data.main.temp)
-  tempElement.innerHTML = celciusTemp
-}
-
 function showFahrenheit(event) {
   event.preventDefault()
   let fahrenheitTemp = document.querySelector('#tempnow')
   let celciusTemp = Math.round(response.data.main.temp)
   fahrenheitTemp.innerHTML = Math.round((celciusTemp * 9) / 5 + 32)
+}
+
+function showCelsius(event) {
+  event.preventDefault()
+  let tempElement = document.querySelector('#tempnow')
+  tempElement.innerHTML = celciusTemp
 }
 
 let dateElement = document.querySelector('#date')
