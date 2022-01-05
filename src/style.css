@@ -15,7 +15,7 @@ h1 {
   margin-top: 20px;
 }
 
-.searchnow {
+.searchnow .btn {
   background: rgb(243, 182, 147);
   font-weight: bold;
   font-size: 16px;
@@ -23,7 +23,7 @@ h1 {
   border: none;
 }
 
-.current-button {
+.current-button .btn {
   background: rgb(165, 211, 217);
   font-weight: bold;
   font-size: 16px;
