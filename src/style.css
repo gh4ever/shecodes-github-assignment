@@ -77,11 +77,12 @@ li {
 .celsius-link,
 fahrenheit-link {
   cursor: default;
+  text-decoration: none;
 }
 
 .celsius-link,
 fahrenheit-link:hover {
-  text-decoration: none;
+  color: ;
 }
 
 .search-bar {
