@@ -1,5 +1,5 @@
 .body {
-  font-family: Raleway;
+  font-family: overpass;
   box-sizing: border-box;
   border-radius: 16px;
   box-shadow: 0 30px 50px rgb(65 50 100 / 8%);
@@ -7,6 +7,7 @@
 }
 
 h1 {
+  font-family: flamenco;
   color: rgb(147, 212, 191);
   text-shadow: 4px 3px 0px #7a7a7a;
   text-align: center;
@@ -22,6 +23,12 @@ h1 {
   font-size: 16px;
   padding: 15px 0;
   border: none;
+}
+
+.searchnow:hover {
+  background: #ff96ad;
+  box-shadow: 0 0 5px #ff96ad, 0 0 25px #ff96ad, 0 0 50px #ff96ad,
+    0 0 200px #ff96ad;
 }
 
 .current-button {
@@ -52,7 +59,7 @@ li {
 }
 
 .weatherapp {
-  background-color: rgb(252, 180, 192);
+  background-color: rgb(245, 207, 213);
   color: rgb(33, 33, 33);
   border: 1px solid rgb(243, 243, 244);
   padding: 15px;
