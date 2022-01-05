@@ -74,8 +74,17 @@ li {
   font-size: 16px;
 }
 
-.celsius-link,
-fahrenheit-link {
+#celsius-link,
+#fahrenheit-link {
+  cursor: default;
+  text-decoration: none;
+}
+
+.active {
+  text-decoration: none;
+}
+
+.active:hover {
   cursor: default;
   text-decoration: none;
 }

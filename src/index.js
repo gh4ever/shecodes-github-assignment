@@ -66,6 +66,8 @@ function getCurrentLocation(event) {
 
 function showFahrenheit(event) {
   event.preventDefault()
+  celsiusLink.classList.remove('active')
+  fahrenheitLink.classList.add('active')
   let fahrenheitTemp = document.querySelector('#tempnow')
   let celciusTemp = Math.round(response.data.main.temp)
   fahrenheitTemp.innerHTML = Math.round((celciusTemp * 9) / 5 + 32)
@@ -73,6 +75,8 @@ function showFahrenheit(event) {
 
 function showCelsius(event) {
   event.preventDefault()
+  celsiusLink.classList.add('active')
+  fahrenheitLink.classList.remove('active')
   let tempElement = document.querySelector('#tempnow')
   tempElement.innerHTML = celciusTemp
 }
