@@ -99,12 +99,6 @@ h2 {
   color: #fdff03;
 }
 
-#celsius,
-#fehrenheit {
-  text-decoration: none;
-  color: #fdff03;
-}
-
 .active {
   color: #fdff03;
   cursor: default;
@@ -112,8 +106,6 @@ h2 {
 
 .active:hover {
   text-decoration: none;
-  text-shadow: 0 0 5px #fdff03, 0 0 25px #fdff03, 0 0 50px #fdff03,
-    0 0 200px #fdff03;
 }
 
 #details {
@@ -154,6 +146,13 @@ h2 {
 #wind {
   color: red;
   text-decoration: underline;
+}
+
+#iconback {
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  background-color: #3a1c9c;
 }
 
 #forecast {
