@@ -77,6 +77,17 @@ h1 {
   text-align: center;
   text-shadow: 0 0 5px #fdff03, 0 0 25px #fdff03, 0 0 50px #fdff03,
     0 0 200px #fdff03;
+  animation: pulse 1500ms infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: #fdff03 0 0 0 0;
+  }
+
+  75% {
+    box-shadow: #fdff0300 0 0 0 16px;
+  }
 }
 
 h2 {
