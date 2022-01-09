@@ -19,7 +19,7 @@ function showDateTime(timestamp) {
     'Saturday',
   ]
   let day = days[date.getDay()]
-  return `La La Land ${day} ${hour}:${minutes}`
+  return `La La Land  ${day} ${hour}:${minutes}`
 }
 
 function showTemperature(response) {
@@ -96,3 +96,4 @@ let currentLocation = document.querySelector('#location')
 currentLocation.addEventListener('click', getCurrentLocation)
 
 search('Tel Aviv')
+showForecast('Tel Aviv')
