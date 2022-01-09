@@ -97,14 +97,12 @@ h2 {
   top: -32px;
 }
 
-#celsius {
-  color: #fdff03;
-  cursor: default;
-  text-decoration: none;
-}
-
 .active {
   color: #fdff03;
+  cursor: default;
+}
+
+.active:hover {
   text-decoration: none;
   text-shadow: 0 0 5px #fdff03, 0 0 25px #fdff03, 0 0 50px #fdff03,
     0 0 200px #fdff03;
