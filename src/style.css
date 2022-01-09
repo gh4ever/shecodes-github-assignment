@@ -1,108 +1,151 @@
-.body {
-  box-sizing: border-box;
-  border-radius: 16px;
-  box-shadow: 0 30px 50px rgb(65 50 100 / 8%);
-  padding: 40px;
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  background: #f9f7fe;
+  text-align: left;
 }
+
+.App {
+  max-width: 800px;
+  margin: 60px auto;
+}
+
+.Container {
+  max-width: 700px;
+  width: 100%;
+  padding: 40px;
+  margin: 0 auto;
+  background: linear-gradient(#170063 0%, #3a1c9c 50%, #5f2fbd 100%);
+  border-radius: 15px;
+  box-shadow: 0 30px 50px rgb(65 50 100 / 8%);
+  color: #c9c9c9;
+  text-transform: capitalize;
+}
+
+#dateTime {
+  font-family: special elite;
+  color: #fdff03;
+  text-shadow: 0 0 3px #ffffbc, 0 0 5px #ffffff;
+}
+
+#search-input {
+  background: #f9f7fe;
+  border: none;
+  padding: 15px 20px;
+  display: inline-block;
+  border-radius: 6px;
+  color: rgba(39, 33, 66, 0.4);
+  font-size: 16px;
+  height: 50px;
+  line-height: 20px;
+}
+
+#search-button {
+  background: #170063;
+  color: #fdff03;
+  text-shadow: 0 0 1px #ffffff, 0 0 3px #fdfdba;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 15px 0;
+  border: none;
+  height: 50px;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+  border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+#search-button:hover {
+  text-shadow: 0 0 5px #fdff03, 0 0 25px #fdff03, 0 0 50px #fdff03,
+    0 0 200px #fdff03;
 
 h1 {
-  color: rgb(147, 212, 191);
-  text-shadow: 4px 3px 0px #7a7a7a;
+  margin: 20px 0 10px;
+  line-height: 29px;
+  font-weight: 700;
+  font-size: 65px;
+  line-height: 50px;
+  color: #fdff03;
+  text-transform: capitalize;
+  font-family: lobster;
+  letter-spacing: 3px;
   text-align: center;
-  font-size: 45px;
-  font-weight: bold;
-  line-height: 28px;
-  margin-top: 20px;
+  text-shadow: 0 0 5px #fdff03, 0 0 25px #fdff03, 0 0 50px #fdff03,
+    0 0 200px #fdff03;
 }
 
-.searchnow .btn {
-  background: rgb(243, 182, 147);
-  font-weight: bold;
-  font-size: 16px;
-  padding: 15px 0;
-  border: none;
+h2 {
+  margin: 20px 0 10px;
+  line-height: 29px;
+  font-weight: 700;
+  font-size: 80px;
+  color: #fdff03;
+  font-family: lobster;
+  text-align: center;
+  text-transform: capitalize;
 }
 
-.current-button .btn {
-  background: rgb(165, 211, 217);
-  font-weight: bold;
-  font-size: 16px;
-  padding: 15px 0;
-  border: none;
-}
-
-.current-button:hover {
-  background: #ff96ad;
-  box-shadow: 0 0 5px #ff96ad, 0 0 25px #ff96ad, 0 0 50px #ff96ad,
-    0 0 200px #ff96ad;
-}
-
-ul {
-  margin: 0 0 10px;
-  padding: 0;
-}
-
-li {
-  font-size: 16px;
-  font-weight: 100;
-  height: 19px;
-  line-height: 1;
-  list-style: none;
-}
-
-.weatherapp {
-  background-color: rgb(245, 207, 213);
-  color: rgb(33, 33, 33);
-  border: 1px solid rgb(243, 243, 244);
-  padding: 15px;
-  margin: 20px auto;
-  border-radius: 10px;
-  max-width: 600px;
-  box-shadow: 2px 2px;
-}
-
-.temperature {
-  color: rgb(33, 33, 33);
-  font-size: 64px;
-  font-weight: 400;
-  line-height: 1;
-}
-
-.units {
+.unit {
+  font-size: 25px;
   position: relative;
-  top: -34px;
-  font-size: 16px;
+  line-height: 1;
+  top: -32px;
 }
 
-#celsius-link,
-#fahrenheit-link {
-  cursor: default;
-  text-decoration: none;
+#details {
+  margin: 10px;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.082);
 }
 
-.active {
-  text-decoration: none;
+.card-header {
+  background: #9874e0;
 }
 
-.active:hover {
-  cursor: default;
-  text-decoration: none;
+.card-body {
+  font-family: special elite;
+  font-weight: bold;
+  background: #f6f1ff;
+  color: black;
 }
 
-.search-bar {
-  margin-bottom: 20px;
+#location {
+  color: #fdff03;
 }
 
-.small {
-  font-size: 80%;
-  font-weight: 400;
-  display: block;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
+#location:hover {
+  text-shadow: 0 0 5px #fdff03, 0 0 25px #fdff03, 0 0 50px #fdff03,
+    0 0 200px #fdff03;
 }
 
-footer {
+#description {
+  text-transform: capitalize;
+  text-decoration: underline;
+  text-shadow: 0 0 5px #fdff03, 0 0 25px #fdff03, 0 0 50px #fdff03,
+    0 0 200px #fdff03;
+}
+
+#humidity,
+#wind {
+  color: red;
+  text-decoration: underline;
+}
+
+#forecast {
+  margin: 10px;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 14px;
+  background-color: rgba(255, 255, 255, 0.082);
+  color: #fbfbff;
+  text-align: center;
+}
+
+p {
   text-align: center;
 }

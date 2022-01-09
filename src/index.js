@@ -1,13 +1,14 @@
-function formatDate(date) {
-  let hours = date.getHours()
-  if (hours < 10) {
-    hours = `0${hours}`
+function showDateTime(timestamp) {
+  let date = new Date(timestamp)
+  let hour = date.getHours()
+  if (hour < 10) {
+    hour = `0${hour}`
   }
   let minutes = date.getMinutes()
   if (minutes < 10) {
     minutes = `0${minutes}`
   }
-  let dayIndex = date.getDay()
+
   let days = [
     'Sunday',
     'Monday',
@@ -17,84 +18,67 @@ function formatDate(date) {
     'Friday',
     'Saturday',
   ]
-  let day = days[dayIndex]
-
-  return `${day} ${hours}:${minutes}`
+  let day = days[date.getDay()]
+  return `${day} ${hour}:${minutes}`
 }
 
-function showWeather(response) {
-  document.querySelector('#city').innerHTML = response.data.name
-  document.querySelector('#tempnow').innerHTML = Math.round(
-    response.data.main.temp,
+function showTemperature(response) {
+  let temperatureElement = document.querySelector('#temperature')
+  let cityElement = document.querySelector('h1')
+  let descriptionElement = document.querySelector('#description')
+  let humidElement = document.querySelector('#humidity')
+  let windElelment = document.querySelector('#wind')
+  let dateElement = document.querySelector('h3')
+  let iconElement = document.querySelector('#icons')
+
+  celsiusTemperature = response.data.main.temp
+
+  temperatureElement.innerHTML = Math.round(celsiusTemperature)
+  cityElement.innerHTML = response.data.name
+  descriptionElement.innerHTML = response.data.weather[0].description
+  humidElement.innerHTML = response.data.main.humidity
+  windElelment.innerHTML = response.data.wind.speed
+  dateElement.innerHTML = formateDate(response.data.dt * 1000)
+  iconElement.setAttribute(
+    'src',
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
   )
-  document.querySelector('#humidity').innerHTML = response.data.main.humidity
-  document.querySelector('#wind').innerHTML = response.data.wind.speed
-  document.querySelector('#description').innerHTML =
-    response.data.weather[0].main
-  document
-    .querySelector('#icon')
-    .setAttribute(
-      'src',
-      `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
-    )
 }
 
-function searchCity(city) {
-  let myKey = `384b4ddb18472833708d25e324b56156`
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${myKey}`
-
-  axios.get(apiUrl).then(showWeather)
-}
-
-function changeName(event) {
+function handleSubmit(event) {
   event.preventDefault()
-  let targetName = document.querySelector('#city')
-  targetName.innerHTML = document.querySelector('#cityname').value
-  searchCity(targetName.innerHTML)
+  let searchElement = document.querySelector('#search-input')
+  search(searchElement.value)
 }
 
-function showLocation(position) {
-  let myKey = `384b4ddb18472833708d25e324b56156`
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${myKey}&units=metric`
-  axios.get(apiUrl).then(showWeather)
-}
-
-function getCurrentLocation(event) {
-  event.preventDefault()
-  navigator.geolocation.getCurrentPosition(showLocation)
+function search(city) {
+  let apiKey = '384b4ddb18472833708d25e324b56156'
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`
+  axios.get(apiUrl).then(showTemperature)
 }
 
 function showFahrenheit(event) {
   event.preventDefault()
-  celsiusLink.classList.remove('active')
-  fahrenheitLink.classList.add('active')
-  let fahrenheitTemp = document.querySelector('#tempnow')
-  let celciusTemp = Math.round(response.data.main.temp)
-  fahrenheitTemp.innerHTML = Math.round((celciusTemp * 9) / 5 + 32)
+  let temperatureElement = document.querySelector('#temperature')
+  let fahrenheitTemp = (celsiusTemperature * 9) / 5 + 32
+  temperatureElement.innerHTML = Math.round(fahrenheitTemp)
 }
 
 function showCelsius(event) {
   event.preventDefault()
-  celsiusLink.classList.add('active')
-  fahrenheitLink.classList.remove('active')
-  let tempElement = document.querySelector('#tempnow')
-  tempElement.innerHTML = celciusTemp
+  let temperatureElement = document.querySelector('#temperature')
+  temperatureElement.innerHTML = Math.round(celsiusTemperature)
 }
 
-let dateElement = document.querySelector('#date')
-let currentTiem = new Date()
-dateElement.innerHTML = formatDate(currentTiem)
+let celsiusTemperature = null
 
-let searchForm = document.querySelector('#search-bar')
-searchForm.addEventListener('submit', changeName)
+let form = document.querySelector('#search-form')
+form.addEventListener('submit', handleSubmit)
 
-let currentLocation = document.querySelector('#current-button')
-currentLocation.addEventListener('click', getCurrentLocation)
+let celsiusTemp = document.querySelector('#celsius')
+celsiusTemp.addEventListener('click', showCelsius)
 
-let celsiusLink = document.querySelector('#celsius-link')
-celsiusLink.addEventListener('click', showCelsius)
-
-let fahrenheitLink = document.querySelector('#fahrenheit-link')
+let fahrenheitLink = document.querySelector('#fahrenheit')
 fahrenheitLink.addEventListener('click', showFahrenheit)
 
-searchCity('Tel Aviv')
+search('Tel Aviv')
