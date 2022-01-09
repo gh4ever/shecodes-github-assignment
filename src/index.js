@@ -70,6 +70,17 @@ function showCelsius(event) {
   temperatureElement.innerHTML = Math.round(celsiusTemperature)
 }
 
+function showLocation(position) {
+  let myKey = `384b4ddb18472833708d25e324b56156`
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${myKey}&units=metric`
+  axios.get(apiUrl).then(showTemperature)
+}
+
+function getCurrentLocation(event) {
+  event.preventDefault()
+  navigator.geolocation.getCurrentPosition(showLocation)
+}
+
 let celsiusTemperature = null
 
 let form = document.querySelector('#search-form')
@@ -80,5 +91,8 @@ celsiusTemp.addEventListener('click', showCelsius)
 
 let fahrenheitLink = document.querySelector('#fahrenheit')
 fahrenheitLink.addEventListener('click', showFahrenheit)
+
+let currentLocation = document.querySelector('#location')
+currentLocation.addEventListener('click', getCurrentLocation)
 
 search('Tel Aviv')
