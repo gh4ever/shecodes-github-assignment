@@ -99,6 +99,12 @@ h2 {
   color: #fdff03;
 }
 
+#celsius,
+#fehrenheit {
+  text-decoration: none;
+  color: #fdff03;
+}
+
 .active {
   color: #fdff03;
   cursor: default;
