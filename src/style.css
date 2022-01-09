@@ -100,7 +100,6 @@ h2 {
 #celsius {
   color: #fdff03;
   cursor: default;
-  text-decoration: none;
 }
 
 #celsius:hover {
