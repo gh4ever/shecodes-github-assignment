@@ -19,7 +19,7 @@ function showDateTime(timestamp) {
     'Saturday',
   ]
   let day = days[date.getDay()]
-  return `"La La La" + ${day} ${hour}:${minutes}`
+  return `La La La ${day} ${hour}:${minutes}`
 }
 
 function showTemperature(response) {

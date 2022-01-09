@@ -82,11 +82,11 @@ h1 {
 
 @keyframes pulse {
   0% {
-    box-shadow: #fdff03 0 0 0 0;
+    text-shadow: #fdff03 0 0 0 0;
   }
 
   75% {
-    box-shadow: #fdff0300 0 0 0 16px;
+    text-shadow: #fdff0300 0 0 0 16px;
   }
 }
 
