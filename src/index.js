@@ -57,14 +57,6 @@ function search(city) {
   axios.get(apiUrl).then(showTemperature)
 }
 
-function showCelsius(event) {
-  event.preventDefault()
-  let temperatureElement = document.querySelector('#temperature')
-  celsiusTemperature.classList.add('active')
-  fehrenheitTemp.classList.remove('active')
-  temperatureElement.innerHTML = Math.round(celsiusTemperature)
-}
-
 function showFahrenheit(event) {
   event.preventDefault()
   let temperatureElement = document.querySelector('#temperature')
@@ -72,6 +64,14 @@ function showFahrenheit(event) {
   fehrenheitTemp.classList.add('active')
   let fahrenheitTemp = (celsiusTemperature * 9) / 5 + 32
   temperatureElement.innerHTML = Math.round(fahrenheitTemp)
+}
+
+function showCelsius(event) {
+  event.preventDefault()
+  let temperatureElement = document.querySelector('#temperature')
+  celsiusTemperature.classList.add('active')
+  fehrenheitTemp.classList.remove('active')
+  temperatureElement.innerHTML = Math.round(celsiusTemperature)
 }
 
 function showLocation(position) {
