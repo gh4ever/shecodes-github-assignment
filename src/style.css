@@ -95,15 +95,15 @@ h2 {
   position: relative;
   line-height: 1;
   top: -32px;
+  text-decoration: none;
 }
 
-#celsius {
+.active {
   color: #fdff03;
   cursor: default;
 }
 
-#celsius:hover {
-  text-decoration: none;
+.active:hover {
   text-shadow: 0 0 5px #fdff03, 0 0 25px #fdff03, 0 0 50px #fdff03,
     0 0 200px #fdff03;
 }
