@@ -60,7 +60,6 @@ function search(city) {
 function showFahrenheit(event) {
   event.preventDefault()
   let temperatureElement = document.querySelector('#temperature')
-
   let fahrenheitTemp = (celsiusTemperature * 9) / 5 + 32
   temperatureElement.innerHTML = Math.round(fahrenheitTemp)
 }
