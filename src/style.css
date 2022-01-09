@@ -97,14 +97,27 @@ h2 {
   top: -32px;
   text-decoration: none;
   color: #fdff03;
-  text-shadow: 0 0 5px #fdff03, 0 0 25px #fdff03, 0 0 50px #fdff03,
-    0 0 200px #fdff03;
 }
 
 .active {
   color: #fdff03;
   cursor: default;
   text-decoration: none;
+}
+
+.active:hover {
+  text-shadow: 0 0 5px #fdff03, 0 0 25px #fdff03, 0 0 50px #fdff03,
+    0 0 200px #fdff03;
+}
+
+#fahrenheit {
+  color: #fdff03;
+  cursor: default;
+}
+
+#fahrenheit:hover {
+  text-shadow: 0 0 5px #fdff03, 0 0 25px #fdff03, 0 0 50px #fdff03,
+    0 0 200px #fdff03;
 }
 
 #details {
