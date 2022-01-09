@@ -91,10 +91,25 @@ h2 {
 }
 
 .unit {
+  color: #fdff03;
   font-size: 25px;
   position: relative;
   line-height: 1;
   top: -32px;
+}
+
+#celsius {
+  cursor: default;
+}
+
+#celsius:hover {
+  text-decoration: none;
+}
+
+#fahrenheit {
+  text-decoration: none;
+  text-shadow: 0 0 5px #fdff03, 0 0 25px #fdff03, 0 0 50px #fdff03,
+    0 0 200px #fdff03;
 }
 
 #details {
