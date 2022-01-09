@@ -24,11 +24,11 @@ function showDateTime(timestamp) {
 
 function showTemperature(response) {
   let temperatureElement = document.querySelector('#temperature')
-  let cityElement = document.querySelector('h1')
+  let cityElement = document.querySelector('#city')
   let descriptionElement = document.querySelector('#description')
   let humidElement = document.querySelector('#humidity')
   let windElelment = document.querySelector('#wind')
-  let dateElement = document.querySelector('h3')
+  let dateElement = document.querySelector('#dateTime')
   let iconElement = document.querySelector('#icons')
 
   celsiusTemperature = response.data.main.temp
@@ -38,7 +38,7 @@ function showTemperature(response) {
   descriptionElement.innerHTML = response.data.weather[0].description
   humidElement.innerHTML = response.data.main.humidity
   windElelment.innerHTML = response.data.wind.speed
-  dateElement.innerHTML = formateDate(response.data.dt * 1000)
+  dateElement.innerHTML = showDateTime(response.data.dt * 1000)
   iconElement.setAttribute(
     'src',
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
