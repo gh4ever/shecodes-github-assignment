@@ -110,18 +110,6 @@ h2 {
   color: #fdff03;
 }
 
-#celsius,
-#fahrenheit {
-  color: #fdff03;
-  text-decoration: none;
-}
-
-#celsius,
-#fahrenheit:hover {
-  text-shadow: 0 0 5px #fdff03, 0 0 25px #fdff03, 0 0 50px #fdff03,
-    0 0 200px #fdff03;
-}
-
 .active {
   color: #fdff03;
   text-decoration: none;
@@ -132,6 +120,18 @@ h2 {
   cursor: default;
   text-decoration: none;
   color: #fdff03;
+}
+
+#celsius,
+#fahrenheit {
+  color: #fdff03;
+  text-decoration: none;
+}
+
+#celsius,
+#fahrenheit:hover {
+  text-shadow: 0 0 5px #fdff03, 0 0 25px #fdff03, 0 0 50px #fdff03,
+    0 0 200px #fdff03;
 }
 
 #details {
