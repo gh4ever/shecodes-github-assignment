@@ -80,8 +80,7 @@ h1 {
 
 @-webkit-keyframes glow {
   from {
-    text-shadow: 0 0 10px #fdff03, 0 0 20px #fdff03, 0 0 30px #fdff03,
-      0 0 40px #fdff03, 0 0 50px #fdff03, 0 0 60px #fdff03, 0 0 70px #fdff03;
+    text-shadow: none;
   }
 
   to {
@@ -130,6 +129,8 @@ h2 {
 
 #celsius,
 #fahrenheit:hover {
+  color: #fdff03;
+  text-decoration: none;
   text-shadow: 0 0 5px #fdff03, 0 0 25px #fdff03, 0 0 50px #fdff03,
     0 0 200px #fdff03;
 }
@@ -172,6 +173,13 @@ h2 {
 #wind {
   color: red;
   text-decoration: underline;
+}
+
+#iconback {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: #5f2fbd;
 }
 
 #forecast {
