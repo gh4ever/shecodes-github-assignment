@@ -80,6 +80,18 @@ h1 {
   animation: glow 1500ms ease-in-out infinite alternate;
 }
 
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fdff03, 0 0 20px #fdff03, 0 0 30px #fdff03,
+      0 0 40px #fdff03, 0 0 50px #fdff03, 0 0 60px #fdff03, 0 0 70px #fdff03;
+  }
+
+  to {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ffffcf,
+      0 0 40px #ffff7c, 0 0 50px #ffff43, 0 0 60px #fcfc1b, 0 0 70px #fdff03;
+  }
+}
+
 h2 {
   margin: 20px 0 10px;
   line-height: 29px;
@@ -103,19 +115,25 @@ h2 {
 .active {
   color: #fdff03;
   text-decoration: none;
+  text-shadow: 0 0 5px #fdff03, 0 0 25px #fdff03, 0 0 50px #fdff03,
+    0 0 200px #fdff03;
 }
 
 .active:hover {
+  cursor: default;
+  text-decoration: none;
   color: #fdff03;
   text-shadow: 0 0 5px #fdff03, 0 0 25px #fdff03, 0 0 50px #fdff03,
     0 0 200px #fdff03;
 }
 
+#celsius,
 #fahrenheit {
   color: #fdff03;
   text-decoration: none;
 }
 
+#celsius,
 #fahrenheit:hover {
   text-shadow: 0 0 5px #fdff03, 0 0 25px #fdff03, 0 0 50px #fdff03,
     0 0 200px #fdff03;
