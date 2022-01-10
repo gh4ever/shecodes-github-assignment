@@ -113,14 +113,13 @@ h2 {
 .active {
   color: #fdff03;
   text-decoration: none;
+  cursor: default;
 }
 
 .active:hover {
   cursor: default;
   text-decoration: none;
   color: #fdff03;
-  text-shadow: 0 0 5px #fdff03, 0 0 25px #fdff03, 0 0 50px #fdff03,
-    0 0 200px #fdff03;
 }
 
 #celsius,
