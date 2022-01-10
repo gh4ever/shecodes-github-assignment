@@ -36,7 +36,7 @@ function showDateTime(timestamp) {
 
   let month = months[date.getMonth()]
 
-  return `${date.getFullYear()}/${month}/${date.getDate()} ${hour}:${minutes}`
+  return `La La Land,  ${date.getFullYear()}/${month}/${date.getDate()} ${hour}:${minutes}`
 }
 
 function showForecast() {
