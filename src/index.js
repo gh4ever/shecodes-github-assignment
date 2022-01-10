@@ -19,7 +19,33 @@ function showDateTime(timestamp) {
     'Saturday',
   ]
   let day = days[date.getDay()]
-  return `La La Land  ${day} ${hour}:${minutes}`
+  let months = [
+    'Jan',
+    'Feb',
+    'Mar',
+    'Apr',
+    'May',
+    'Jun',
+    'Jul',
+    'Aug',
+    'Sep',
+    'Oct',
+    'Nov',
+    'Dec',
+  ]
+
+  let month = months[date.getMonth()]
+
+  return `La La Land  ${date.getFullYear()}/${month}/${date.getDate()} ${hour}:${minutes}`
+}
+
+function showForecast() {
+  let forecastElement = document.querySelector('forcast')
+
+  let forecastHTML = ''
+  forecastHTML = ``
+
+  forecastElement.innerHTML = forecastHTML
 }
 
 function showTemperature(response) {
@@ -62,12 +88,16 @@ function showFahrenheit(event) {
   let temperatureElement = document.querySelector('#temperature')
   let fahrenheitTemp = (celsiusTemperature * 9) / 5 + 32
   temperatureElement.innerHTML = Math.round(fahrenheitTemp)
+  celsiusTemp.classList.remove('active')
+  fahrenheitLink.classList.add('active')
 }
 
 function showCelsius(event) {
   event.preventDefault()
   let temperatureElement = document.querySelector('#temperature')
   temperatureElement.innerHTML = Math.round(celsiusTemperature)
+  celsiusTemp.classList.add('active')
+  fahrenheitLink.classList.remove('active')
 }
 
 function showLocation(position) {
