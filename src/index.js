@@ -52,7 +52,7 @@ function showForecast(response) {
 
   let forecastElement = document.querySelector('#forecast')
 
-  let forecastHTML = `<div class="row" id="forecast-week">`
+  let forecastHTML = `<div class="row">`
 
   forecast.forEach(function (forecastDay, index) {
     if (index < 6) {
@@ -60,9 +60,7 @@ function showForecast(response) {
         forecastHTML +
         `
       <div class="col-2">
-        <div class="weather-forecast-date" id="forecast-day">${formatDay(
-          forecastDay.dt,
-        )}</div>
+        <div class="weather-forecast-date">${formatDay(forecastDay.dt)}</div>
         <img
           src="http://openweathermap.org/img/wn/${
             forecastDay.weather[0].icon
