@@ -55,7 +55,7 @@ function showForecast(response) {
   let forecastHTML = `<div class="row">`
 
   forecast.forEach(function (forecastDay, index) {
-    if (index > 0 && index < 6) {
+    if (index > 0 && index < 7) {
       forecastHTML =
         forecastHTML +
         `
@@ -119,6 +119,7 @@ function showTemperature(response) {
 
 function handleSubmit(event) {
   event.preventDefault()
+
   let searchElement = document.querySelector('#search-input')
   search(searchElement.value)
 }
