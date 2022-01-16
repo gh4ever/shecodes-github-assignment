@@ -166,8 +166,9 @@ h2 {
 }
 
 #iconback {
-  height: 37px;
-  width: 37px;
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
   background-color: #3a1c9c;
 }
 
