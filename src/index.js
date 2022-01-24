@@ -121,9 +121,10 @@ function showTemperature(response) {
 
 function handleSubmit(event) {
   event.preventDefault()
-
   let searchElement = document.querySelector('#search-input')
   search(searchElement.value)
+  celsiusTemp.classList.add('active')
+  fahrenheitLink.classList.remove('active')
 }
 
 function search(city) {
